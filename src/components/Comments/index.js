@@ -82,35 +82,48 @@ class Comments extends Component {
     const {nameInput, commentInput, commentsList} = this.state
     return (
       <div className="app-container">
-        <div className="comments-container">
-          <h1 className="title">Comments</h1>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
-            alt="comments"
-            className="comments-img"
-          />
-          <p className="description">Say something about 4.0 Technologies</p>
-          <form className="comment-form-container" onSubmit={this.onAddComment}>
-            <input
-              type="text"
-              className="name-input"
-              placeholder="Your Name"
-              onChange={this.onChangeName}
-              value={nameInput}
-            />
-            <textarea
-             
-              className="comments-input"
-              placeholder=" Your Comment"
-              onChange={this.onChangeComment}
-              value={commentInput}
-              rows="6"
-            />
-            <button type="submit" className="button">
-              Add Comment
-            </button>
-          </form>
+        <div className="responsive-container">
+          <div className="comment-img-container">
+            <div className="comment-container">
+              <h1 className="title">Comments</h1>
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
+                alt="comments"
+                className="comments-img"
+              />
+              <p className="description">
+                Say something about 4.0 Technologies
+              </p>
 
+              <form
+                className="comment-form-container"
+                onSubmit={this.onAddComment}
+              >
+                <input
+                  type="text"
+                  className="name-input"
+                  placeholder="Your Name"
+                  onChange={this.onChangeName}
+                  value={nameInput}
+                />
+                <textarea
+                  className="comments-input"
+                  placeholder=" Your Comment"
+                  onChange={this.onChangeComment}
+                  value={commentInput}
+                  rows="6"
+                />
+                <button type="submit" className="button">
+                  Add Comment
+                </button>
+              </form>
+            </div>
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
+              alt="comments"
+              className="comments-img-lg"
+            />
+          </div>
           <hr className="seperator" />
           <div className="comment-count-container">
             <p className="comments-count">{commentsList.length}</p>
